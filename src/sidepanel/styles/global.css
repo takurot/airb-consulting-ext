@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-white text-airbnb-hof;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+  }
+}
+
+@layer components {
+  /* Skeleton loading animation */
+  .skeleton {
+    @apply bg-gray-200 animate-shimmer;
+    background-image: linear-gradient(
+      90deg,
+      #f0f0f0 0px,
+      #e0e0e0 40px,
+      #f0f0f0 80px
+    );
+    background-size: 1000px 100%;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-lg shadow-airbnb p-4 transition-shadow;
+  }
+
+  .card:hover {
+    @apply shadow-airbnb-hover;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded-lg font-medium transition-colors;
+  }
+
+  .btn-primary:hover {
+    @apply bg-primary-dark;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-gray-300 text-airbnb-hof px-4 py-2 rounded-lg font-medium transition-all;
+  }
+
+  .btn-secondary:hover {
+    @apply border-gray-400 shadow-sm;
+  }
+
+  /* Badge styles */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-info {
+    @apply bg-blue-100 text-blue-800;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
